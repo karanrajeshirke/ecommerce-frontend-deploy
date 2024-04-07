@@ -5,7 +5,10 @@ import { useAuth } from "../../src/context/Auth";
 import { useEffect, useState } from "react";
 import { Button, Modal } from "antd";
 import { Rate } from "antd";
+import { useNavigate } from "react-router-dom";
 const Order = () => {
+
+  const navigate=useNavigate();
   const [auth, setAuth] = useAuth();
   const [orders, setOrders] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -93,6 +96,7 @@ const Order = () => {
       alert("review marked");
       setRating(0);
       setUserComment("");
+      navigate('/');
       window.location.reload();
     } catch (error) {
       if (error?.response?.data?.message) {
