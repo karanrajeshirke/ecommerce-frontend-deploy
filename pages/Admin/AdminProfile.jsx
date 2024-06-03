@@ -280,12 +280,12 @@ const AdminProfile = () => {
 <Select onChange={(val) => {
   console.log(val);
   setCategoryDate(moment(val).toISOString())}} className="w-75">
-  <Select.Option value={moment().clone().subtract(1, 'day').format('MMMM DD, YYYY')} key={1}>1 day before</Select.Option>
+  {/* <Select.Option value={moment().clone().subtract(1, 'day').format('MMMM DD, YYYY')} key={1}>1 day before</Select.Option>
   <Select.Option value={moment().clone().subtract(2, 'day').format('MMMM DD, YYYY')} key={2}>2 days before</Select.Option>
   <Select.Option value={moment().clone().subtract(3, 'day').format('MMMM DD, YYYY')} key={3}>3 days before</Select.Option>
   <Select.Option value={moment().clone().subtract(4, 'day').format('MMMM DD, YYYY')} key={4}>4 days before</Select.Option>
   <Select.Option value={moment().clone().subtract(5, 'day').format('MMMM DD, YYYY')} key={5}>5 days before</Select.Option>
-  <Select.Option value={moment().clone().subtract(6, 'day').format('MMMM DD, YYYY')} key={6}>6 days before</Select.Option>
+  <Select.Option value={moment().clone().subtract(6, 'day').format('MMMM DD, YYYY')} key={6}>6 days before</Select.Option> */}
   <Select.Option value={moment().clone().subtract(7, 'day').format('MMMM DD, YYYY')} key={7}>1 week before</Select.Option>
   <Select.Option value={moment().clone().subtract(14, 'day').format('MMMM DD, YYYY')} key={8}>2 week before</Select.Option>
   <Select.Option value={moment().clone().subtract(28, 'day').format('MMMM DD, YYYY')} key={9}>3 week before</Select.Option>
