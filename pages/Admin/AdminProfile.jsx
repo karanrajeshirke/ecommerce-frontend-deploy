@@ -147,6 +147,12 @@ const AdminProfile = () => {
 
   }, [categoryDate]);
 
+  const handleDateChange = (val) => {
+    console.log(val);
+    const parsedDate = moment(val, 'MMMM DD, YYYY'); 
+    setCategoryDate(parsedDate.toISOString()); 
+  };
+
 
   
 
@@ -277,29 +283,26 @@ const AdminProfile = () => {
 <h1 style={{marginLeft:"90px"}}>{changetoINR(categorySalesValue)}</h1>
 
 <div className="text-center">
-<Select onChange={(val) => {
-  console.log(val);
-  setCategoryDate(moment(val).toISOString())}} className="w-75">
-  {/* <Select.Option value={moment().clone().subtract(1, 'day').format('MMMM DD, YYYY')} key={1}>1 day before</Select.Option>
-  <Select.Option value={moment().clone().subtract(2, 'day').format('MMMM DD, YYYY')} key={2}>2 days before</Select.Option>
-  <Select.Option value={moment().clone().subtract(3, 'day').format('MMMM DD, YYYY')} key={3}>3 days before</Select.Option>
-  <Select.Option value={moment().clone().subtract(4, 'day').format('MMMM DD, YYYY')} key={4}>4 days before</Select.Option>
-  <Select.Option value={moment().clone().subtract(5, 'day').format('MMMM DD, YYYY')} key={5}>5 days before</Select.Option>
-  <Select.Option value={moment().clone().subtract(6, 'day').format('MMMM DD, YYYY')} key={6}>6 days before</Select.Option> */}
-  <Select.Option value={moment().clone().subtract(7, 'day').format('MMMM DD, YYYY')} key={7}>1 week before</Select.Option>
-  <Select.Option value={moment().clone().subtract(14, 'day').format('MMMM DD, YYYY')} key={8}>2 week before</Select.Option>
-  <Select.Option value={moment().clone().subtract(28, 'day').format('MMMM DD, YYYY')} key={9}>3 week before</Select.Option>
-  <Select.Option value={moment().clone().subtract(30, 'day').format('MMMM DD, YYYY')} key={10}>1 month before</Select.Option>
-  <Select.Option value={moment().clone().subtract(60, 'day').format('MMMM DD, YYYY')} key={11}>2 month before</Select.Option>
-  <Select.Option value={moment().clone().subtract(90, 'day').format('MMMM DD, YYYY')} key={12}>3 month before</Select.Option>
-  <Select.Option value={moment().clone().subtract(120, 'day').format('MMMM DD, YYYY')} key={13}>4 month before</Select.Option>
-  <Select.Option value={moment().clone().subtract(150, 'day').format('MMMM DD, YYYY')} key={14}>5 month before</Select.Option>
-  <Select.Option value={moment().clone().subtract(180, 'day').format('MMMM DD, YYYY')} key={15}>6 month before</Select.Option>
-  <Select.Option value={moment().clone().subtract(210, 'day').format('MMMM DD, YYYY')} key={16}>7 month before</Select.Option>
-  <Select.Option value={moment().clone().subtract(240, 'day').format('MMMM DD, YYYY')} key={17}>8 month before</Select.Option>
-  <Select.Option value={moment().clone().subtract(270, 'day').format('MMMM DD, YYYY')} key={18}>9 month before</Select.Option>
-
-</Select>
+<Select onChange={handleDateChange} className="w-75">
+    <Select.Option value={moment().clone().subtract(1, 'day').format('MMMM DD, YYYY')} key={1}>1 day before</Select.Option>
+    <Select.Option value={moment().clone().subtract(2, 'day').format('MMMM DD, YYYY')} key={2}>2 days before</Select.Option>
+    <Select.Option value={moment().clone().subtract(3, 'day').format('MMMM DD, YYYY')} key={3}>3 days before</Select.Option>
+    <Select.Option value={moment().clone().subtract(4, 'day').format('MMMM DD, YYYY')} key={4}>4 days before</Select.Option>
+    <Select.Option value={moment().clone().subtract(5, 'day').format('MMMM DD, YYYY')} key={5}>5 days before</Select.Option>
+    <Select.Option value={moment().clone().subtract(6, 'day').format('MMMM DD, YYYY')} key={6}>6 days before</Select.Option>
+    <Select.Option value={moment().clone().subtract(7, 'day').format('MMMM DD, YYYY')} key={7}>1 week before</Select.Option>
+    <Select.Option value={moment().clone().subtract(14, 'day').format('MMMM DD, YYYY')} key={8}>2 weeks before</Select.Option>
+    <Select.Option value={moment().clone().subtract(28, 'day').format('MMMM DD, YYYY')} key={9}>3 weeks before</Select.Option>
+    <Select.Option value={moment().clone().subtract(30, 'day').format('MMMM DD, YYYY')} key={10}>1 month before</Select.Option>
+    <Select.Option value={moment().clone().subtract(60, 'day').format('MMMM DD, YYYY')} key={11}>2 months before</Select.Option>
+    <Select.Option value={moment().clone().subtract(90, 'day').format('MMMM DD, YYYY')} key={12}>3 months before</Select.Option>
+    <Select.Option value={moment().clone().subtract(120, 'day').format('MMMM DD, YYYY')} key={13}>4 months before</Select.Option>
+    <Select.Option value={moment().clone().subtract(150, 'day').format('MMMM DD, YYYY')} key={14}>5 months before</Select.Option>
+    <Select.Option value={moment().clone().subtract(180, 'day').format('MMMM DD, YYYY')} key={15}>6 months before</Select.Option>
+    <Select.Option value={moment().clone().subtract(210, 'day').format('MMMM DD, YYYY')} key={16}>7 months before</Select.Option>
+    <Select.Option value={moment().clone().subtract(240, 'day').format('MMMM DD, YYYY')} key={17}>8 months before</Select.Option>
+    <Select.Option value={moment().clone().subtract(270, 'day').format('MMMM DD, YYYY')} key={18}>9 months before</Select.Option>
+  </Select>
 
 </div>
 
