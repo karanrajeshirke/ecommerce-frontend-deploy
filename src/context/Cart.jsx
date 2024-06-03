@@ -14,7 +14,7 @@ const CartProvider = ({ children }) => {
     if (storedData) {
       let parsedData = JSON.parse(storedData);
 
-      console.log(parsedData);
+
 
       setCartGlobal((prev) => {
         return {
